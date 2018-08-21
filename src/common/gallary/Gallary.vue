@@ -12,32 +12,32 @@
 </template>
 
 <script>
-    export default {
-        name: 'CommonGallary',
-        props: {
-            imgs: {
-                type: Array,
-                default () {
-                    return []
-                }
-            }
-        },
-        data () {
-            return {
-               swiperOption: {
-                    pagination: '.swiper-pagination',
-                    paginationType:'fraction',
-                    observeParents: true,
-                    observer: true
-                }
-            }
-        },
-        methods: {
-            handleGallaryClick () {
-                this.$emit('close')
-            }
-        }
+export default {
+  name: 'CommonGallary',
+  props: {
+    imgs: {
+      type: Array,
+      default () {
+        return []
+      }
     }
+  },
+  data () {
+    return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        paginationType:'fraction',
+        observeParents: true,
+        observer: true
+      }
+    }
+  },
+  methods: {
+      handleGallaryClick () {
+          this.$emit('close')
+      }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -47,7 +47,7 @@
       display: flex
       flex-direction: column
       justify-content: center
-      z-index: 99 
+      z-index: 99
       position: fixed
       left: 0
       right: 0

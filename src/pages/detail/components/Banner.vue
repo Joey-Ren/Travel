@@ -18,26 +18,26 @@
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
-    export default {
-        name:'DetailBanner',
-        components: {
-            CommonGallary
-        },
-        data () {
-           return {
-                imgs: ['http://img1.qunarzz.com/sight/p0/1611/c7/c7e3e61bbe91ffd0a3.water.jpg_350x240_688eb870.jpg','http://img1.qunarzz.com/sight/p0/1611/c7/c7e3e61bbe91ffd0a3.water.jpg_350x240_688eb870.jpg'],
-                showGallary:false
-           }
-        },
-        methods: {
-            handleBannerClick () {
-                this.showGallary=true
-            },
-            handleGallaryClose () {
-                this.showGallary=false
-            }
-        }
-    }
+export default {
+  name:'DetailBanner',
+  components: {
+      CommonGallary
+  },
+  data () {
+      return {
+          imgs: ['http://img1.qunarzz.com/sight/p0/1611/c7/c7e3e61bbe91ffd0a3.water.jpg_350x240_688eb870.jpg','http://img1.qunarzz.com/sight/p0/1611/c7/c7e3e61bbe91ffd0a3.water.jpg_350x240_688eb870.jpg'],
+          showGallary:false
+      }
+  },
+  methods: {
+      handleBannerClick () {
+          this.showGallary=true
+      },
+      handleGallaryClose () {
+          this.showGallary=false
+      }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -61,7 +61,7 @@ import CommonGallary from 'common/gallary/Gallary'
                 font-size: .32rem
                 flex: 1
                 padding: 0 .2rem
-             .banner-number 
+             .banner-number
                padding: 0 .4rem
                height: .32rem
                line-height: .32rem
@@ -70,5 +70,5 @@ import CommonGallary from 'common/gallary/Gallary'
                background: rgba(0, 0, 0, .8)
                font-size: .24rem
                .banner-icon
-                   font-size: .24rem 
+                   font-size: .24rem
 </style>
