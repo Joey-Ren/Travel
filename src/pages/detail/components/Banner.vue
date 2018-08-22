@@ -1,18 +1,18 @@
 <template>
     <div>
         <div class="banner"  @click="handleBannerClick">
-            <img class="banner-img" src="http://img1.qunarzz.com/sight/p32/201211/09/d24abcc97581ee8b93835fbb.jpg_600x330_1f0c67f7.jpg">
+            <img class="banner-img" :src="bannerImg">
             <div class="banner-info">
                 <div class="banner-title">
-                    万鸟岛
+                    {{this.sightName}}
                 </div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe692;</span>
-                    39
+                    {{this.bannerImgs.length}}
                 </div>
             </div>
         </div>
-        <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+        <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
     </div>
 </template>
 
@@ -23,9 +23,13 @@ export default {
   components: {
       CommonGallary
   },
+  props: {
+      sightName: String,
+      bannerImg: String,
+      bannerImgs:Array
+  },
   data () {
       return {
-          imgs: ['http://img1.qunarzz.com/sight/p0/1611/c7/c7e3e61bbe91ffd0a3.water.jpg_350x240_688eb870.jpg','http://img1.qunarzz.com/sight/p0/1611/c7/c7e3e61bbe91ffd0a3.water.jpg_350x240_688eb870.jpg'],
           showGallary:false
       }
   },
